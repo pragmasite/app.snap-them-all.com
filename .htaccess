@@ -1,0 +1,16 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^app\.snap\-them\-all\.com$
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteRule ^android$ "https\:\/\/play\.google\.com\/store\/apps\/details\?id\=io\.gregunz\.SnapThemAll" [R=301,L]
+RewriteCond %{HTTP_HOST} ^app\.snap\-them\-all\.com$
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteRule ^ios$ "https\:\/\/snap\-them\-all\.com\/" [R=301,L]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# This domain inherits the “PHP” package.
+# php -- END cPanel-generated handler, do not edit
